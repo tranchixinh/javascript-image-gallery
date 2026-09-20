@@ -1,53 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Image Gallery</title>
+    <title>Interactive Image Gallery</title>
+
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
-<body>
+<body onload="addTabFocus()">
 
-    <h1>JavaScript Image Gallery</h1>
+    <header>
+        <h1>Interactive Image Gallery</h1>
+        <p>
+            Use your mouse or keyboard to explore the images.
+        </p>
+    </header>
 
-    <div id="image">
-        Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.
-    </div>
+    <main>
 
-    <div class="gallery">
-        <img src="https://picsum.photos/id/1015/300/200"
-             alt="Mountain"
-             onmouseover="upDate(this)"
-             onmouseout="unDo()">
+        <div id="image">
+            Hover over an image below to display it here.
+        </div>
 
-        <img src="https://picsum.photos/id/1016/300/200"
-             alt="Forest"
-             onmouseover="upDate(this)"
-             onmouseout="unDo()">
+        <section class="gallery">
 
-        <img src="https://picsum.photos/id/1018/300/200"
-             alt="River"
-             onmouseover="upDate(this)"
-             onmouseout="unDo()">
+            <figure
+                onmouseover="upDate(this.querySelector('img'))"
+                onmouseleave="unDo()"
+                onfocus="focusFunction(this)"
+                onblur="blurFunction()">
 
-        <img src="https://picsum.photos/id/1025/300/200"
-             alt="Dog"
-             onmouseover="upDate(this)"
-             onmouseout="unDo()">
+                <img
+                    src="https://picsum.photos/id/1015/600/400"
+                    alt="Mountain landscape with a river">
 
-        <img src="https://picsum.photos/id/1035/300/200"
-             alt="Beach"
-             onmouseover="upDate(this)"
-             onmouseout="unDo()">
+                <figcaption>Mountain Landscape</figcaption>
+            </figure>
 
-        <img src="https://picsum.photos/id/1043/300/200"
-             alt="Lake"
-             onmouseover="upDate(this)"
-             onmouseout="unDo()">
-    </div>
 
-    <script src="script.js"></script>
+            <figure
+                onmouseover="upDate(this.querySelector('img'))"
+                onmouseleave="unDo()"
+                onfocus="focusFunction(this)"
+                onblur="blurFunction()">
+
+                <img
+                    src="https://picsum.photos/id/1016/600/400"
+                    alt="Mountain peaks beside a calm lake">
+
+                <figcaption>Mountain and Lake</figcaption>
+            </figure>
+
+
+            <figure
+                onmouseover="upDate(this.querySelector('img'))"
+                onmouseleave="unDo()"
+                onfocus="focusFunction(this)"
+                onblur="blurFunction()">
+
+                <img
+                    src="https://picsum.photos/id/1025/600/400"
+                    alt="A dog looking toward the camera">
+
+                <figcaption>Dog</figcaption>
+            </figure>
+
+
+            <figure
+                onmouseover="upDate(this.querySelector('img'))"
+                onmouseleave="unDo()"
+                onfocus="focusFunction(this)"
+                onblur="blurFunction()">
+
+                <img
+                    src="https://picsum.photos/id/1035/600/400"
+                    alt="Green forest with tall trees">
+
+                <figcaption>Forest</figcaption>
+            </figure>
+
+
+            <figure
+                onmouseover="upDate(this.querySelector('img'))"
+                onmouseleave="unDo()"
+                onfocus="focusFunction(this)"
+                onblur="blurFunction()">
+
+                <img
+                    src="https://picsum.photos/id/1043/600/400"
+                    alt="Ocean waves near a rocky coastline">
+
+                <figcaption>Ocean</figcaption>
+            </figure>
+
+
+            <figure
+                onmouseover="upDate(this.querySelector('img'))"
+                onmouseleave="unDo()"
+                onfocus="focusFunction(this)"
+                onblur="blurFunction()">
+
+                <img
+                    src="https://picsum.photos/id/1069/600/400"
+                    alt="Rocky mountain landscape under a blue sky">
+
+                <figcaption>Rocky Mountains</figcaption>
+            </figure>
+
+        </section>
+
+    </main>
 
 </body>
 </html>
